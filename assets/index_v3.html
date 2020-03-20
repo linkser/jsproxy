@@ -133,8 +133,8 @@
         let [id, url] = v
         url = url || `www.${id}.com/`
         return `\
-<a rel="noopener noreferrer" href="./-----https://${url}">\
-<img width=128px height=128px src="__sys__/assets/ico/${id}.png"></a>`
+            <a rel="noopener noreferrer" href="./-----https://${url}">\
+            <img width="128px" height="128px" src="__sys__/assets/ico/${id}.png"></a>`
       }).join('')
     }
 
