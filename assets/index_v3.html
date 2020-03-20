@@ -115,23 +115,21 @@
     }
 
     const SITE_LIST = [
-      ['google', ''],
-      ['youtube', ''],
+      ['google', 'www.google.com/'],
+      ['youtube', 'www.youtube.com/'],
       ['twitter', 'twitter.com/google'],
-      ['flickr', ''],
+      ['flickr', 'www.flickr.com/'],
       ['quora', 'www.quora.com/topic/JavaScript-programming-language'],
       ['twitch', 'www.twitch.tv/'],
-      ['reddit', ''],
+      ['reddit', 'www.reddit.com/'],
       ['wiki', 'zh.wikipedia.org/'],
       ['gist', 'gist.github.com/'],
       ['facebook', 'facebook.com/Google/'],
-      ['blogger', ''],
+      ['blogger', 'www.blogger.com/'],
     ]
 
     function showIcons() {
-      list.innerHTML = SITE_LIST.map(v => {
-        let [id, url] = v
-        url = url || `www.${id}.com/`
+      list.innerHTML = SITE_LIST.map((id, url) => {
         return `\
             <a rel="noopener noreferrer" href="./-----https://${url}">\
             <img width="128px" height="128px" src="__sys__/assets/ico/${id}.png"></a>`
