@@ -129,7 +129,8 @@
     ]
 
     function showIcons() {
-      list.innerHTML = SITE_LIST.map((id, url) => {
+      list.innerHTML = SITE_LIST.map(v => {
+        let [id, url] = v
         return `\
             <a rel="noopener noreferrer" href="./-----https://${url}">\
             <img width="128px" height="128px" src="__sys__/assets/ico/${id}.png"></a>`
